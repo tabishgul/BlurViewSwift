@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BlurView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-image" translatesAutoresizingMaskIntoConstraints="NO" id="pWv-aA-jVM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIm-5a-8Oz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xJC-qP-UYb">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Open." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d94-xT-w5Y">
+                                <rect key="frame" x="137.33333333333337" y="383.66666666666669" width="139.66666666666663" height="28.666666666666686"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6m-rB-TT7">
+                                <rect key="frame" x="82" y="-300" width="250" height="250"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="king-card" translatesAutoresizingMaskIntoConstraints="NO" id="EAX-bK-UYR">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="EAX-bK-UYR" firstAttribute="top" secondItem="Y6m-rB-TT7" secondAttribute="top" id="CbD-iU-vQL"/>
+                                    <constraint firstAttribute="height" constant="250" id="FCI-Z5-gva"/>
+                                    <constraint firstAttribute="trailing" secondItem="EAX-bK-UYR" secondAttribute="trailing" id="aOZ-tg-xMD"/>
+                                    <constraint firstAttribute="width" secondItem="Y6m-rB-TT7" secondAttribute="height" multiplier="1:1" id="fkD-AH-fSM"/>
+                                    <constraint firstAttribute="bottom" secondItem="EAX-bK-UYR" secondAttribute="bottom" id="i7E-8T-hRU"/>
+                                    <constraint firstItem="EAX-bK-UYR" firstAttribute="leading" secondItem="Y6m-rB-TT7" secondAttribute="leading" id="p98-5X-kTb"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pWv-aA-jVM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6Ir-XV-R8w"/>
+                            <constraint firstItem="d94-xT-w5Y" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="30" id="A7t-SO-1yI"/>
+                            <constraint firstItem="pWv-aA-jVM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I0s-G0-BVO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pWv-aA-jVM" secondAttribute="trailing" id="JOZ-Ah-H61"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DIm-5a-8Oz" secondAttribute="trailing" id="MuC-93-m5I"/>
+                            <constraint firstItem="Y6m-rB-TT7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-300" id="aLK-hI-bou"/>
+                            <constraint firstAttribute="bottom" secondItem="DIm-5a-8Oz" secondAttribute="bottom" id="cRa-bD-aXd"/>
+                            <constraint firstItem="DIm-5a-8Oz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="e0a-nu-IO2"/>
+                            <constraint firstItem="Y6m-rB-TT7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="evF-7Y-g26"/>
+                            <constraint firstItem="DIm-5a-8Oz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iCg-A2-JU5"/>
+                            <constraint firstItem="d94-xT-w5Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="loi-oP-ift"/>
+                            <constraint firstAttribute="bottom" secondItem="pWv-aA-jVM" secondAttribute="bottom" id="s7k-tZ-iDu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blurVu" destination="DIm-5a-8Oz" id="JJ4-W8-dTw"/>
+                        <outlet property="tapToOpenLbl" destination="d94-xT-w5Y" id="Nh2-de-P1l"/>
+                        <outlet property="vuTopConstraint" destination="aLK-hI-bou" id="SH0-o8-8mT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="68.478260869565219"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background-image" width="612" height="612"/>
+        <image name="king-card" width="800" height="800"/>
+    </resources>
+</document>
